@@ -1,0 +1,84 @@
+body {
+    background: #101010;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .clock {
+    width: 25rem;
+    height: 25rem;
+    border: 20px solid whitesmoke;
+    background-image: url('https://cloud-p0jq8mkcf-hack-club-bot.vercel.app/0image_3.png');
+    background-size: cover;
+    border-radius: 50px;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1),
+                inset 0 0 0 3px #efefef,
+                inset 0 0 10px black,
+                0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hand {
+    background: #ffffff;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+  
+  .hour-hand {
+    width: 30%;
+    right: 50%;
+    animation: rotate-hour 43200s linear infinite;
+  }
+  
+  .min-hand {
+    width: 35%;
+    right: 50%;
+    animation: rotate-minute 3600s linear infinite;
+  }
+  
+  .second-hand {
+    width: 40%;
+    right: 50%;
+    animation: rotate-second 60s linear infinite;
+  }
+  
+  @keyframes rotate-hour {
+    0% {
+      transform: rotate(90deg);
+    }
+    100% {
+      transform: rotate(450deg);
+    }
+  }
+  
+  @keyframes rotate-minute {
+    0% {
+      transform: rotate(90deg);
+    }
+    100% {
+      transform: rotate(540deg);
+    }
+  }
+  
+  @keyframes rotate-second {
+    0% {
+      transform: rotate(90deg);
+    }
+    100% {
+      transform: rotate(630deg);
+    }
+  }
